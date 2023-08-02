@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnoCSS Preset Marumaru</title>
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/antfu/unocss/main/playground/public/favicon.svg"
+      type="image/svg+xml"
+    />
+  </head>
+
+  <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose mx-auto">
+    <main class="mx-auto text-base">
+      <a href="https://github.com/maikotan/unocss-preset-marumaru" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <div id="readme"></div>
+
+      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-1</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-1"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-2</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-2"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-4</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-4"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-full</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-full"></div>
+        </div>
+      </div>
+
+      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-t-8</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-t-8"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-b-8</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-b-8"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-l-8</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-l-8"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-r-8</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-r-8"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/shiki"></script>
+    <script type="module">
+      import 'uno.css'
+      import { marked } from 'marked'
+      import readme from './README.md?raw'
+
+      document.getElementById('readme').innerHTML = marked.parse(readme, {
+        langPrefix: '',
+      })
+
+      const preBlocks = document.querySelectorAll('pre')
+
+      shiki
+        .getHighlighter({
+          theme: 'material-palenight',
+          langs: ['html', 'sh', 'js', 'ts'],
+        })
+        .then((hl) => {
+          for (const block of preBlocks) {
+            block.outerHTML = hl.codeToHtml(block.textContent, block.firstElementChild.className || 'text')
+          }
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "unocss-preset-marumaru",
+  "version": "0.0.1",
+  "description": "A preset for UniApp, mainly for rounded shapes.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "type": "module",
+  "author": {
+    "name": "Maiko Tan",
+    "email": "maiko.tan.coding@gmail.com",
+    "url": "https://github.com/MaikoTan"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "build:demo": "vite build --mode demo"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@unocss/preset-mini": "^0.54.1",
+    "marked": "^6.0.0",
+    "typescript": "^5.1.6",
+    "unocss": "^0.54.1",
+    "vite": "^4.4.8"
+  },
+  "peerDependencies": {
+    "unocss": "^0.54.1"
+  },
+  "packageManager": "yarn@3.6.1"
+}
