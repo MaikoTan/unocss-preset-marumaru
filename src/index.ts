@@ -46,5 +46,8 @@ export function presetMarumaru(): Preset {
       }],
       [/^br-(-?(\d+)|full)$/, ([, d]) => ({ 'border-radius': parseValue(d) })],
     ],
+    shortcuts: {
+      'flex-center': 'flex items-center justify-center',
+    },
   }
 }
