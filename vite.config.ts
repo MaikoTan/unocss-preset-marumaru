@@ -5,6 +5,7 @@ import { presetTypography } from 'unocss'
 import unocss from 'unocss/vite'
 
 export default defineConfig(({ mode }) => ({
+  base: '',
   plugins: [
     unocss({
       presets: [
