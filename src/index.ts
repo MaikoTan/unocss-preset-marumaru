@@ -8,6 +8,15 @@ export function presetMarumaru(): Preset {
     rules: getRules(),
     shortcuts: {
       'flex-center': 'flex items-center justify-center',
+      'flex-col-center': 'flex flex-col items-center justify-center',
+      'btn': 'inline-block px-4 py-2 space-nowrap rounded-md cursor-pointer',
+      'btn-pill': 'btn rounded-full',
+      'btn-primary': 'btn bg-blue-500 text-white hover:bg-blue-600',
+      'btn-info': 'btn bg-white text-black border border-gray-300 hover:bg-gray-50',
+      'btn-success': 'btn bg-green-500 text-white hover:bg-green-600',
+      'btn-warning': 'btn bg-yellow-500 text-white hover:bg-yellow-600',
+      'btn-danger': 'btn bg-red-500 text-white hover:bg-red-600',
+      'btn-link': 'btn bg-transparent text-blue-500 hover:bg-blue-50',
     },
   }
 }
