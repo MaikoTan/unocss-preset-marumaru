@@ -4,7 +4,7 @@ import { parseValue } from '../utils'
 
 export function getBorderRadiusRules(): Rule[] {
   return [
-    [/^br-(t|b|l|r|top|bottom|left|right)-(-?.+)$/, ([, d, v]) => {
+    [/^br-(t|b|l|r|top|bottom|left|right|tl|tr|bl|br)-(-?.+)$/, ([, d, v]) => {
       const directions = {
         'top-left': false,
         'top-right': false,
@@ -23,6 +23,14 @@ export function getBorderRadiusRules(): Rule[] {
         directions['bottom-left'] = true
       } else if (d === 'r' || d === 'right') {
         directions['top-right'] = true
+        directions['bottom-right'] = true
+      } else if (d === 'tl') {
+        directions['top-left'] = true
+      } else if (d === 'tr') {
+        directions['top-right'] = true
+      } else if (d === 'bl') {
+        directions['bottom-left'] = true
+      } else if (d === 'br') {
         directions['bottom-right'] = true
       }
 
