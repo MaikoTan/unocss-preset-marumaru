@@ -10,7 +10,7 @@ export function presetMarumaru(): Preset {
       {
         getCSS(_ctx) {
           return `
-            :root {
+            *,::before,::after {
               --un-marumaru-border-top-left-radius: 0;
               --un-marumaru-border-top-right-radius: 0;
               --un-marumaru-border-bottom-right-radius: 0;
