@@ -8,7 +8,7 @@ export function presetMarumaru(): Preset {
     rules: getRules(),
     preflights: [
       {
-        getCSS(ctx) {
+        getCSS(_ctx) {
           return `
             :root {
               --un-marumaru-border-top-left-radius: 0;
