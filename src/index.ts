@@ -27,20 +27,21 @@ export function presetMarumaru(): Preset {
       {
         'circle': 'b-1 b-solid rounded-full',
         'circle-solid': 'b-transparent bg-gray-500 rounded-full',
+      },
+      [
+        /^flex(-col)?-(center|start|end|left|right|normal|between|around|evenly|stretch)-(normal|stretch|center|start|end|baseline)$/,
+        ([, col, p1, p2]) => `flex ${col ? 'flex-col' : ''} justify-${p1} items-${p2}`,
+      ],
+      {
         'flex-center': 'flex items-center justify-center',
         'flex-col-center': 'flex flex-col items-center justify-center',
-        'btn': 'inline-block px-4 py-2 space-nowrap rounded-md cursor-pointer',
+        'btn': 'inline-block px-4 py-2 space-nowrap break-keep rounded-md cursor-pointer',
         'btn-xs': 'btn text-xs px-1 py-0.5',
         'btn-sm': 'btn text-sm px-2 py-1',
         'btn-lg': 'btn text-lg px-6 py-3',
         'btn-xl': 'btn text-xl px-8 py-4',
         'btn-pill': 'btn rounded-full',
-        'btn-primary': 'btn bg-blue-500 text-white hover:bg-blue-600',
-        'btn-info': 'btn bg-white text-black border border-gray-300 hover:bg-gray-50',
-        'btn-success': 'btn bg-green-500 text-white hover:bg-green-600',
-        'btn-warning': 'btn bg-yellow-500 text-white hover:bg-yellow-600',
-        'btn-danger': 'btn bg-red-500 text-white hover:bg-red-600',
-        'btn-link': 'btn bg-transparent text-blue-500 hover:bg-blue-50',
+        'btn-text': 'btn bg-transparent b-transparent',
       },
     ],
   }
