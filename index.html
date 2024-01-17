@@ -17,6 +17,9 @@
       <a href="https://github.com/maikotan/unocss-preset-marumaru" target="_blank" rel="noopener noreferrer">GitHub</a>
       <div id="readme"></div>
 
+      <h2>Borders</h2>
+      <p>Use <code>br-&lt;number&gt;</code> to specify the <code>border-radius</code>.</p>
+
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-1</code>
@@ -38,6 +41,12 @@
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-full"></div>
         </div>
       </div>
+
+      <p>
+        Use <code>t</code> / <code>top</code>, <code>r</code> / <code>right</code>, <code>b</code> /
+        <code>bottom</code> or <code>l</code> / <code>left</code>, to specify the side for setting
+        <code>border-radius</code>.
+      </p>
 
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
@@ -61,6 +70,10 @@
         </div>
       </div>
 
+      <p>
+        You can also specify the corner like <code>tl</code> or <code>br</code>, et cetera.
+      </p>
+
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-tl-8</code>
@@ -83,6 +96,8 @@
         </div>
       </div>
 
+      <p>Combinations are also supported.</p>
+
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-tl-8 br-br-8</code>
@@ -95,15 +110,30 @@
         </div>
       </div>
 
+      <h3>Buttons</h3>
+
+      <p>Use <code>btn</code> to style a button.</p>
+
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">btn</code>
           <button class="mb-4 btn btn-info">Button</button>
         </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">btn-pill</code>
+          <button class="mb-4 btn-pill btn-info">Button</button>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">btn-text</code>
+          <button class="mb-4 btn btn-text">Button</button>
+        </div>
       </div>
 
-      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
+      <p>Specify the size for a button with <code>xs</code> or <code>lg</code>, et cetera.</p>
 
+      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">btn-xs</code>
           <button class="mb-4 btn-xs btn-info">Button</button>
@@ -125,44 +155,9 @@
         </div>
       </div>
 
-      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-pill</code>
-          <button class="mb-4 btn-pill btn-info">Button</button>
-        </div>
+      <h3>Circles</h3>
 
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-primary</code>
-          <button class="mb-4 btn btn-primary">Button</button>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-info</code>
-          <button class="mb-4 btn btn-info">Button</button>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-success</code>
-          <button class="mb-4 btn btn-success">Button</button>
-        </div>
-      </div>
-
-      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-warning</code>
-          <button class="mb-4 btn btn-warning">Button</button>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-danger</code>
-          <button class="mb-4 btn btn-danger">Button</button>
-        </div>
-
-        <div class="flex flex-col items-center">
-          <code class="!ws-normal before:-ml-1ch">btn-link</code>
-          <button class="mb-4 btn btn-link">Button</button>
-        </div>
-      </div>
+      <p><code>circle</code> is a shortcut to create a circle or a dot quickly.</p>
 
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
@@ -197,6 +192,44 @@
           </div>
         </div>
       </div>
+
+      <h3>Flex</h3>
+
+      <p>Use <code>flex</code> series to specify how your elements arranged in just one class.</p>
+
+      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">flex-center</code>
+          <div class="w-15 h-15 mb-4 b b-solid flex-center gap-2">
+            <div class="w-5 h-5 bg-gray-500"></div>
+            <div class="w-5 h-5 bg-gray-500"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">flex-col-center</code>
+          <div class="w-15 h-15 mb-4 b b-solid flex-col-center gap-2">
+            <div class="w-5 h-5 bg-gray-500"></div>
+            <div class="w-5 h-5 bg-gray-500"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">flex-start-center</code>
+          <div class="w-15 h-15 mb-4 b b-solid flex-start-center gap-2">
+            <div class="w-5 h-5 bg-gray-500"></div>
+            <div class="w-5 h-5 bg-gray-500"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">flex-between-end</code>
+          <div class="w-15 h-15 mb-4 b b-solid flex-between-end">
+            <div class="w-5 h-5 bg-gray-500"></div>
+            <div class="w-5 h-5 bg-gray-500"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="https://unpkg.com/shiki"></script>
@@ -209,7 +242,7 @@
         langPrefix: '',
       })
 
-      const preBlocks = document.querySelectorAll('pre')
+      const preBlocks = document.querySelectorAll('pre') || []
 
       shiki
         .getHighlighter({
