@@ -17,7 +17,7 @@
   </a>
 </div>
 
-A preset for UniApp, mainly for rounded shapes.
+<p align="center">A preset for UniApp, mainly for rounded shapes.</p>
 
 ## Work in progress
 
