@@ -11,6 +11,14 @@
     "url": "https://github.com/MaikoTan"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaikoTan/unocss-preset-marumaru.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MaikoTan/unocss-preset-marumaru/issues"
+  },
+  "homepage": "https://maikotan.github.io/unocss-preset-marumaru/",
   "scripts": {
     "dev": "vite",
     "build": "vite build && tsc",
