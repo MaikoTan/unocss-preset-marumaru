@@ -12,7 +12,7 @@
     />
   </head>
 
-  <body class="bg-white font-sans m-0 py-6 px-4 antialiased w-100ch mx-auto">
+  <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose max-w-100ch mx-auto">
     <main class="mx-auto text-base">
       <div id="readme"></div>
 
@@ -50,27 +50,31 @@
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-t-8</code>
+          <code class="!ws-normal before:-ml-1ch">br-top-8</code>
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-t-8"></div>
         </div>
 
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-b-8</code>
+          <code class="!ws-normal before:-ml-1ch">br-bottom-8</code>
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-b-8"></div>
         </div>
 
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-l-8</code>
+          <code class="!ws-normal before:-ml-1ch">br-left-8</code>
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-l-8"></div>
         </div>
 
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-r-8</code>
+          <code class="!ws-normal before:-ml-1ch">br-right-8</code>
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-r-8"></div>
         </div>
       </div>
 
       <p>
-        You can also specify the corner like <code>tl</code> or <code>br</code>, et cetera.
+        You can also specify the corner like <code>tl</code> (short for <code>top-left</code>) or <code>br</code> (short for <code>bottom-right</code>), et cetera.
       </p>
 
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
@@ -195,6 +199,10 @@
       <h4>Flex</h4>
 
       <p>Use <code>flex</code> series to specify how your elements arranged in just one class.</p>
+
+      <p>Classes can be <code>flex-{x}-{y}</code> or <code>flex-col-{x}-{y}</code> while <code>x</code> can be <code>justify</code> and <code>y</code> can be <code>items</code> series.</p>
+
+      <p>For example, <code>flex-between-end</code> is a shortcut of <code>flex justify-between items-end</code>. <code>flex-center</code> is a shortcut of <code>flex justify-center items-center</code>.</p>
 
       <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
         <div class="flex flex-col items-center">
