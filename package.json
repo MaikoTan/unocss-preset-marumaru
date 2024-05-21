@@ -21,7 +21,7 @@
   "homepage": "https://maikotan.github.io/unocss-preset-marumaru/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc",
+    "build": "vite build",
     "build:demo": "vite build --mode demo",
     "prepublishOnly": "yarn build"
   },
@@ -33,9 +33,11 @@
     "marked": "^12.0.2",
     "typescript": "^5.4.5",
     "unocss": "^0.60.3",
-    "vite": "^5.2.11"
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
+    "@unocss/preset-mini": "^0.60.0",
     "unocss": "^0.60.0"
   },
   "packageManager": "yarn@4.2.2"
