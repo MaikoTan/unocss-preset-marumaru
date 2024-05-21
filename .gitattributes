@@ -1,0 +1,5 @@
+.yarn/cache/*          -text binary linguist-generated
+.yarn/plugins/*        -text binary linguist-generated
+.yarn/releases/*       -text binary linguist-generated
+.yarn/sdks/*           -text binary linguist-generated
+.yarn/unplugged/*      -text binary linguist-generated
