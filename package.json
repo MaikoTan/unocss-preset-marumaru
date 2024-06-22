@@ -40,5 +40,5 @@
     "@unocss/preset-mini": "^0.60.0",
     "unocss": "^0.60.0"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.3.0"
 }
