@@ -1,4 +1,4 @@
-import { Rule } from 'unocss'
+import { Rule, Shortcut } from 'unocss'
 
 import { parseValue } from '../utils'
 
@@ -44,22 +44,26 @@ export function getBorderRadiusRules(): Rule[] {
             return acc
           },
           {
-            '--un-marumaru-border-radius': 'var(--un-marumaru-border-top-left-radius) var(--un-marumaru-border-top-right-radius) var(--un-marumaru-border-bottom-right-radius) var(--un-marumaru-border-bottom-left-radius)',
             'border-radius': 'var(--un-marumaru-border-radius)',
           },
         )
       },
     ],
     [
-      /^br-(-?(\d+)|full)$/,
+      /^br-(-?(.+)|full)$/,
       ([, d]) => ({
         '--un-marumaru-border-top-left-radius': d === 'full' ? '9999px' : parseValue(d),
         '--un-marumaru-border-top-right-radius': d === 'full' ? '9999px' : parseValue(d),
         '--un-marumaru-border-bottom-right-radius': d === 'full' ? '9999px' : parseValue(d),
         '--un-marumaru-border-bottom-left-radius': d === 'full' ? '9999px' : parseValue(d),
-        '--un-marumaru-border-radius': 'var(--un-marumaru-border-top-left-radius) var(--un-marumaru-border-top-right-radius) var(--un-marumaru-border-bottom-right-radius) var(--un-marumaru-border-bottom-left-radius)',
         'border-radius': 'var(--un-marumaru-border-radius)',
       }),
     ],
+  ]
+}
+
+export function getBorderRadiusShortcuts(): Shortcut[] {
+  return [
+    [/^br-(sm|md|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl|10xl)$/, ([, v]) => `rounded-${v}`],
   ]
 }

@@ -1,6 +1,7 @@
 import { Preset } from 'unocss'
 
 import { getRules } from './_rules'
+import { getBorderRadiusShortcuts } from './_rules/border-radius'
 
 export function presetMarumaru(): Preset {
   return {
@@ -22,6 +23,7 @@ export function presetMarumaru(): Preset {
       },
     ],
     shortcuts: [
+      ...getBorderRadiusShortcuts(),
       [/^circle-(\w+)$/, ([, v]) => `circle b-${v}`],
       [/^circle-solid-(\w+)$/, ([, v]) => `circle-solid bg-${v} text-white`],
       {
