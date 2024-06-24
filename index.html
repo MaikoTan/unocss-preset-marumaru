@@ -14,7 +14,9 @@
 
   <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose max-w-100ch mx-auto">
     <main class="mx-auto text-base">
-      <div id="readme"></div>
+      <div id="readme"><!-- pre-render:readme --></div>
+
+      <div id="app"></div>
 
       <h4>Borders</h4>
       <p>Use <code>br-&lt;number&gt;</code> to specify the <code>border-radius</code>.</p>
@@ -263,28 +265,6 @@
       </div>
     </main>
 
-    <script src="https://unpkg.com/shiki"></script>
-    <script type="module">
-      import 'uno.css'
-      import { marked } from 'marked'
-      import readme from './README.md?raw'
-
-      document.getElementById('readme').innerHTML = marked.parse(readme, {
-        langPrefix: '',
-      })
-
-      const preBlocks = document.querySelectorAll('pre') || []
-
-      shiki
-        .getHighlighter({
-          theme: 'material-palenight',
-          langs: ['html', 'sh', 'js', 'ts'],
-        })
-        .then((hl) => {
-          for (const block of preBlocks) {
-            block.outerHTML = hl.codeToHtml(block.textContent, block.firstElementChild.className || 'text')
-          }
-        })
-    </script>
+    <script type="module" src="./docs/main.ts"></script>
   </body>
 </html>
