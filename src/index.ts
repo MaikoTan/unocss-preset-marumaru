@@ -35,14 +35,29 @@ export function presetMarumaru(): Preset {
       {
         'flex-center': 'flex items-center justify-center',
         'flex-col-center': 'flex flex-col items-center justify-center',
-        'btn': 'inline-block px-4 py-2 space-nowrap break-keep rounded-md cursor-pointer',
-        'btn-xs': 'btn text-xs px-1 py-0.5',
-        'btn-sm': 'btn text-sm px-2 py-1',
-        'btn-lg': 'btn text-lg px-6 py-3',
-        'btn-xl': 'btn text-xl px-8 py-4',
-        'btn-pill': 'btn rounded-full',
-        'btn-text': 'btn bg-transparent b-transparent',
       },
+      [
+        /^btn(?:-(xs|sm|nm|lg|\d?xl))?(?:-(pill|text))?$/,
+        (match) => {
+          const size = match[1] ?? 'nm'
+          const style = match[2] ?? ''
+
+          const baseBtnStyles = 'inline-block space-nowrap break-keep rounded-md cursor-pointer'
+          const sizeStyles = {
+            'xs': 'text-xs px-1 py-0.5',
+            'sm': 'text-sm px-2 py-1',
+            'nm': 'text-base px-4 py-2', // 'nm' stands for 'normal
+            'lg': 'text-lg px-6 py-3',
+            'xl': 'text-xl px-8 py-4',
+          }
+          const styleStyles = {
+            'pill': 'rounded-full',
+            'text': 'bg-transparent b-transparent',
+          }
+
+          return `${baseBtnStyles} ${sizeStyles[size] ?? ''} ${styleStyles[style] ?? ''}`.trim()
+        },
+      ],
     ],
   }
 }
