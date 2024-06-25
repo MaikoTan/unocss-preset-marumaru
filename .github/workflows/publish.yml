@@ -1,0 +1,28 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+
+      - name: Install dependencies
+        run: |
+          corepack enable
+          yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
