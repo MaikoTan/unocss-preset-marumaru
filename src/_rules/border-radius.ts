@@ -39,7 +39,7 @@ export function getBorderRadiusRules(): Rule[] {
         return Object.entries(directions).reduce(
           (acc, [key, value]) => {
             if (directions[key]) {
-              acc[`--un-marumaru-border-${key}-radius`] = value ? parseValue(v) : ''
+              acc[`--un-marumaru-border-${key}-radius`] = value ? (v === 'full' ? '9999px' : parseValue(v)) : ''
             }
             return acc
           },
@@ -50,7 +50,7 @@ export function getBorderRadiusRules(): Rule[] {
       },
     ],
     [
-      /^br-(-?(.+)|full)$/,
+      /^br-(-?(\d+)|full)$/,
       ([, d]) => ({
         '--un-marumaru-border-top-left-radius': d === 'full' ? '9999px' : parseValue(d),
         '--un-marumaru-border-top-right-radius': d === 'full' ? '9999px' : parseValue(d),
