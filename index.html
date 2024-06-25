@@ -10,13 +10,61 @@
       href="https://raw.githubusercontent.com/antfu/unocss/main/playground/public/favicon.svg"
       type="image/svg+xml"
     />
-    <script type="module" crossorigin src="./assets/index-JXgrFvLc.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DTc2BILM.css">
+    <script type="module" crossorigin src="./assets/index--iotJ_X0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-LoD5zXQr.css">
   </head>
 
   <body class="bg-white font-sans m-0 py-6 px-4 antialiased prose max-w-100ch mx-auto">
     <main class="mx-auto text-base">
-      <div id="readme"></div>
+      <div id="readme"><p align="center">
+  <h1 align="center">unocss-preset-marumaru</h1>
+</p>
+
+<div align="center">
+  <a href="https://github.com/maikotan/unocss-preset-marumaru">
+    <img alt="Static Badge" src="https://img.shields.io/badge/GitHub-violet?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://www.npmjs.com/package/unocss-preset-marumaru">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/unocss-preset-marumaru?style=for-the-badge&logo=npm">
+  </a>
+  <a href="https://www.npmjs.com/package/unocss-preset-marumaru">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/unocss-preset-marumaru?style=for-the-badge&logo=npm">
+  </a>
+  <a href="https://maikotan.github.io/unocss-preset-marumaru/">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Documentation-blue?style=for-the-badge&logo=readme&logoColor=f5f5f5">
+  </a>
+</div>
+
+<p align="center">A preset for UniApp, mainly for rounded shapes.</p>
+
+<h2>Work in progress</h2>
+<p>This preset is still in development, and some styles may not be applied correctly.</p>
+<h2>Installation</h2>
+<pre><code class="language-bash">yarn add -D unocss-preset-marumaru
+</code></pre>
+<pre><code class="language-bash">npm i --save-dev unocss-preset-marumaru
+</code></pre>
+<h2>Usage</h2>
+<p>Import the preset in your <code>uno.config.*</code> file.</p>
+<p>You can see the <a href="https://unocss.dev/guide/presets">UnoCSS documentation</a> for more information.</p>
+<pre><code class="language-js">// unocss.config.ts
+import { defineConfig } from &#39;unocss&#39;
+import { presetMarumaru } from &#39;unocss-preset-marumaru&#39;
+
+export default defineConfig({
+  presets: [
+    presetMarumaru(),
+  ],
+})
+</code></pre>
+<h2>Classes</h2>
+<div class="hidden">
+
+<p>See our <a href="https://maikotan.github.io/unocss-preset-marumaru/">documentation</a> for all classes and demos.</p>
+</div>
+</div>
+
+      <div id="app"></div>
 
       <h4>Borders</h4>
       <p>Use <code>br-&lt;number&gt;</code> to specify the <code>border-radius</code>.</p>
@@ -40,6 +88,30 @@
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">br-full</code>
           <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-full"></div>
+        </div>
+      </div>
+
+      <p>You can also use some other representations such as <code>8px</code>, <code>1rem</code> or even <code>sm</code> / <code>md</code> just like <code>rounded</code>-series that provided by the <code>preset-tailwind</code>.</p>
+
+      <div class="border-4 border-gray-200 rounded-lg px-8 py-4 flex gap-4">
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-8px</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-8px"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-2rem</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-2rem"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-1vh</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-1vh"></div>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <code class="!ws-normal before:-ml-1ch">br-md</code>
+          <div class="mb-4 h-24 w-24 b-1 b-black b-solid br-md"></div>
         </div>
       </div>
 
@@ -132,7 +204,7 @@
 
         <div class="flex flex-col items-center">
           <code class="!ws-normal before:-ml-1ch">btn-text</code>
-          <button class="mb-4 btn btn-text">Button</button>
+          <button class="mb-4 btn-text">Button</button>
         </div>
       </div>
 
@@ -241,6 +313,5 @@
       </div>
     </main>
 
-    <script src="https://unpkg.com/shiki"></script>
   </body>
 </html>
