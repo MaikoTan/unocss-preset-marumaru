@@ -5,7 +5,7 @@ import type { RuleContext } from 'unocss'
 
 export function parseValue(value: string, { theme }: RuleContext<Theme>) {
   if (value === 'full') {
-    return '100%'
+    return '9999px'
   }
 
   return theme.lineWidth?.[value || 'DEFAULT'] ?? h.bracket.cssvar.global.auto.fraction.rem(value)

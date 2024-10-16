@@ -38,12 +38,11 @@ export function getBorderRadiusRules(): Rule[] {
 
         const ret = Object.entries(directions).reduce((acc, [key, value]) => {
           if (directions[key]) {
-            acc[`border-${key}-radius`] = value ? (v === 'full' ? '100%' : parseValue(v, ctx)) : undefined
+            acc[`border-${key}-radius`] = value ? (v === 'full' ? '9999px' : parseValue(v, ctx)) : undefined
           }
           return acc
         }, {} as Record<string, string | undefined>)
 
-        console.log(d, v, ret)
         return ret
       },
     ],
