@@ -7,21 +7,6 @@ export function presetMarumaru(): Preset {
   return {
     name: 'unocss-preset-marumaru',
     rules: getRules(),
-    preflights: [
-      {
-        getCSS(_ctx) {
-          return `
-            *,::before,::after {
-              --un-marumaru-border-top-left-radius: 0;
-              --un-marumaru-border-top-right-radius: 0;
-              --un-marumaru-border-bottom-right-radius: 0;
-              --un-marumaru-border-bottom-left-radius: 0;
-              --un-marumaru-border-radius: var(--un-marumaru-border-top-left-radius) var(--un-marumaru-border-top-right-radius) var(--un-marumaru-border-bottom-right-radius) var(--un-marumaru-border-bottom-left-radius);
-            }
-          `
-        },
-      },
-    ],
     shortcuts: [
       ...getBorderRadiusShortcuts(),
       [/^circle-(\w+)$/, ([, v]) => `circle b-${v}`],

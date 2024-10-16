@@ -1,9 +1,12 @@
 import { h } from '@unocss/preset-mini/utils'
 
-export function parseValue(value: string) {
+import type { Theme } from '@unocss/preset-mini/theme'
+import type { RuleContext } from 'unocss'
+
+export function parseValue(value: string, { theme }: RuleContext<Theme>) {
   if (value === 'full') {
-    return '9999px'
+    return '100%'
   }
 
-  return h.bracket.cssvar.global.rem(value)
+  return theme.lineWidth?.[value || 'DEFAULT'] ?? h.bracket.cssvar.global.auto.fraction.rem(value)
 }
