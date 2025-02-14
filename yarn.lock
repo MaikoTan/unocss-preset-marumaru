@@ -3552,8 +3552,8 @@ __metadata:
     vite: "npm:^5.2.11"
     vite-plugin-dts: "npm:^3.9.1"
   peerDependencies:
-    "@unocss/preset-mini": ^0.60.0
-    unocss: ^0.60.0
+    "@unocss/preset-mini": ">=0.60.0"
+    unocss: ">=0.60.0"
   languageName: unknown
   linkType: soft
 

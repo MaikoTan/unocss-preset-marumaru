@@ -1,6 +1,6 @@
 {
   "name": "unocss-preset-marumaru",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A preset for UniApp, mainly for rounded shapes.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,8 +38,8 @@
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
-    "@unocss/preset-mini": "^0.60.0",
-    "unocss": "^0.60.0"
+    "@unocss/preset-mini": ">=0.60.0",
+    "unocss": ">=0.60.0"
   },
   "packageManager": "yarn@4.3.0"
 }
