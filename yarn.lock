@@ -626,6 +626,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jridgewell/sourcemap-codec@npm:^1.5.5":
+  version: 1.5.5
+  resolution: "@jridgewell/sourcemap-codec@npm:1.5.5"
+  checksum: 10/5d9d207b462c11e322d71911e55e21a4e2772f71ffe8d6f1221b8eb5ae6774458c1d242f897fb0814e8714ca9a6b498abfa74dfe4f434493342902b1a48b33a5
+  languageName: node
+  linkType: hard
+
 "@jridgewell/trace-mapping@npm:^0.3.24, @jridgewell/trace-mapping@npm:^0.3.25":
   version: 0.3.25
   resolution: "@jridgewell/trace-mapping@npm:0.3.25"
@@ -1007,12 +1014,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@unocss/core@npm:66.5.2, @unocss/core@npm:^66.5.2":
+  version: 66.5.2
+  resolution: "@unocss/core@npm:66.5.2"
+  checksum: 10/f4e5a7481969cf28d37dd0fea4bdda6ac4242be30a150cae53b7cd17e597299dc1f5f357e5062c785c093d0c4749a010a4536644ffe1ef849b8c433b5e801eaf
+  languageName: node
+  linkType: hard
+
 "@unocss/extractor-arbitrary-variants@npm:0.60.3":
   version: 0.60.3
   resolution: "@unocss/extractor-arbitrary-variants@npm:0.60.3"
   dependencies:
     "@unocss/core": "npm:0.60.3"
   checksum: 10/7dbccd1e2f40a91adfa8e8e504e86ea705bb3fd12e71f3b01c72fbc767b31bd06ea511c3639f47e3d4ec97775b0dde828973ad718c89b65b151f90e9c4e41fcb
+  languageName: node
+  linkType: hard
+
+"@unocss/extractor-arbitrary-variants@npm:66.5.2":
+  version: 66.5.2
+  resolution: "@unocss/extractor-arbitrary-variants@npm:66.5.2"
+  dependencies:
+    "@unocss/core": "npm:66.5.2"
+  checksum: 10/9e95458258e6501ead20aa3601704107cde26155d81549baaeaaf8ac641684f87b9fe5a697db105a099eb5d767044bf4edb956683f3a9303b49a28b6bb412552
   languageName: node
   linkType: hard
 
@@ -1065,7 +1088,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/preset-mini@npm:0.60.3, @unocss/preset-mini@npm:^0.60.3":
+"@unocss/preset-mini@npm:0.60.3":
   version: 0.60.3
   resolution: "@unocss/preset-mini@npm:0.60.3"
   dependencies:
@@ -1073,6 +1096,17 @@ __metadata:
     "@unocss/extractor-arbitrary-variants": "npm:0.60.3"
     "@unocss/rule-utils": "npm:0.60.3"
   checksum: 10/e01a5606fb4b376360281082a8eeb4ba444f36554c862c3e48d2bef3df7814f89e3a0e90a08317691c3561e1bb6bbe38b608d68a474ee8a93e260ad4f9462634
+  languageName: node
+  linkType: hard
+
+"@unocss/preset-mini@npm:^66.5.2":
+  version: 66.5.2
+  resolution: "@unocss/preset-mini@npm:66.5.2"
+  dependencies:
+    "@unocss/core": "npm:66.5.2"
+    "@unocss/extractor-arbitrary-variants": "npm:66.5.2"
+    "@unocss/rule-utils": "npm:66.5.2"
+  checksum: 10/e48676ba0c3778a683c85dd3be4521b4137966f88a9b2963834f5705901f264e8360dacd07f72e66377d985e5093f2fd6fb2233d9eae149aa5cf8103e5e69354
   languageName: node
   linkType: hard
 
@@ -1142,6 +1176,16 @@ __metadata:
     "@unocss/core": "npm:^0.60.3"
     magic-string: "npm:^0.30.10"
   checksum: 10/08de6054226c9d0f2bec4b9989602b3095884dd53f5551b72a1927628e41e82e165b69f08e7489fe7ca806ad3b6a74e7679c52a8172b4e0f52512d8f0bc4db03
+  languageName: node
+  linkType: hard
+
+"@unocss/rule-utils@npm:66.5.2":
+  version: 66.5.2
+  resolution: "@unocss/rule-utils@npm:66.5.2"
+  dependencies:
+    "@unocss/core": "npm:^66.5.2"
+    magic-string: "npm:^0.30.18"
+  checksum: 10/f158c3bb4253bfc9c8d198b420b5d3aecc59d26e70a9ec497c34d3f208ad573036d6b3bd24e2f1da311fcbc69fed246652fd55919ba5b31a32a05ea22a6e9feb
   languageName: node
   linkType: hard
 
@@ -2509,6 +2553,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"magic-string@npm:^0.30.18":
+  version: 0.30.19
+  resolution: "magic-string@npm:0.30.19"
+  dependencies:
+    "@jridgewell/sourcemap-codec": "npm:^1.5.5"
+  checksum: 10/5045467fad59ddfba6ccfb00fde6edbc0f841089f0da07d844cf513c73de289bbbf933bde16168cba2c9ef38d75ac68e1617a5ce74aae16d6f39285bda1d51c4
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^11.0.3":
   version: 11.1.1
   resolution: "make-fetch-happen@npm:11.1.1"
@@ -3544,7 +3597,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "unocss-preset-marumaru@workspace:."
   dependencies:
-    "@unocss/preset-mini": "npm:^0.60.3"
+    "@unocss/preset-mini": "npm:^66.5.2"
     marked: "npm:^12.0.2"
     shiki: "npm:^1.9.0"
     typescript: "npm:^5.4.5"
