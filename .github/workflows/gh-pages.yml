@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     permissions:
@@ -12,13 +15,15 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'yarn'
       - name: Install dependencies
         run: |
           corepack enable
+          corepack use yarn@4.3.0
           yarn install
       - run: yarn run build:demo
       - uses: peaceiris/actions-gh-pages@v3

@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
 
 jobs:
   publish:
@@ -13,16 +19,21 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
 
       - name: Install dependencies
         run: |
           corepack enable
+          corepack use yarn@4.3.0
           yarn install
 
       - name: Build
         run: yarn build
 
       - name: Publish
+        if: github.ref == 'refs/heads/master'
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
