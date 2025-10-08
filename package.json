@@ -34,7 +34,7 @@
     "shiki": "^1.9.0",
     "typescript": "^5.4.5",
     "unocss": "^0.60.3",
-    "vite": "^5.2.11",
+    "vite": "^7.1.9",
     "vite-plugin-dts": "^3.9.1"
   },
   "peerDependencies": {
